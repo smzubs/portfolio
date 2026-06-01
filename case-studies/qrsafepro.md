@@ -89,11 +89,16 @@ Enforcing multi-tenant isolation at the database layer (rather than in applicati
 
 ## Screenshots / Demo
 
-- ![QRSafePro homepage](../assets/screenshots/qrsafepro/home.png) — product homepage
-- Coming soon: inspection dashboard screenshot
-- Coming soon: QR scan → field workflow screenshot
-- Coming soon: mobile / field-user view
-- Coming soon: 1–2 minute demo video
+_Product homepage:_
+
+![QRSafePro homepage](../assets/screenshots/qrsafepro/home.png)
+
+Coming soon:
+
+- Inspection dashboard screenshot
+- QR scan → field workflow screenshot
+- Mobile / field-user view
+- 1–2 minute demo video
 
 ---
 

@@ -86,10 +86,15 @@ Faithful document output matters as much as the data model — carriers expect t
 
 ## Screenshots / Demo
 
-- ![PolicyPilot homepage](../assets/screenshots/policypilot/home.png) — product homepage
-- Coming soon: data-entry → form-generation workflow screenshot
-- Coming soon: generated ACORD PDF preview
-- Coming soon: 1–2 minute demo video
+_Product homepage:_
+
+![PolicyPilot homepage](../assets/screenshots/policypilot/home.png)
+
+Coming soon:
+
+- Data-entry → form-generation workflow screenshot
+- Generated ACORD PDF preview
+- 1–2 minute demo video
 
 ---
 

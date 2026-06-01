@@ -75,9 +75,14 @@ For a marketing site, restraint wins — clear structure and speed matter far mo
 
 ## Screenshots / Demo
 
-- ![Knight Electric homepage](../assets/screenshots/knight-electric/home.png) — live homepage
-- Coming soon: services / interior pages
-- Coming soon: mobile view
+_Live homepage:_
+
+![Knight Electric homepage](../assets/screenshots/knight-electric/home.png)
+
+Coming soon:
+
+- Services / interior pages
+- Mobile view
 
 ---
 
