@@ -1,79 +1,88 @@
 # PolicyPilot
 
-**Insurance-agency CRM with automated ACORD form fill.**
-
-🔗 **Live:** [policypilot-one.vercel.app](https://policypilot-one.vercel.app)
-🧭 **Type:** Web SaaS — handles sensitive client data (PII)
-🛠 **Role:** Sole designer, engineer, and operator
+🔗 **Live demo:** [policypilot-one.vercel.app](https://policypilot-one.vercel.app)
 
 ![PolicyPilot](../assets/policypilot-home.png)
 
----
+## Summary
+
+PolicyPilot is a document-automation tool for insurance agencies. Agencies live on **ACORD forms** — the standardized paperwork that moves a policy from submission to binding — and re-key the same client and policy information across form after form. PolicyPilot captures that data once and **auto-fills the ACORD forms from it**, turning repetitive manual paperwork into a generated document.
 
 ## Problem
 
-Insurance agencies run on **ACORD forms** — the standardized documents that move a policy from submission to binding. The work is repetitive, error-prone, and built on **highly sensitive personal data**: names, addresses, dates of birth, and financial details flowing between applicant, agency, and carrier.
+Insurance agencies re-enter the same information across many standardized forms by hand. It's slow, error-prone, and scattered — the same data retyped into document after document, with transcription mistakes creeping in along the way.
 
-Agencies re-key the same client information across form after form. That wastes hours, introduces transcription errors, and — most importantly for anyone thinking about compliance — **scatters personal data across documents with no consistent control over who can see what.**
+## Solution
 
-PolicyPilot's goal: capture client and policy data once, **auto-fill ACORD forms from it**, and keep that sensitive data under tight, auditable access control the whole way through.
+A web app where an agent enters client and policy data once, and the system generates filled, carrier-ready ACORD PDFs from it through a controlled document-automation pipeline. One authoritative record drives every form.
 
-## My role
+## My Role
 
-I own the product end to end — data model, the document-automation pipeline, the security model around PII, the UI, and operations. Every decision below was mine.
+**Solo product owner and AI-assisted implementation builder** — product design, architecture direction, AI-assisted implementation, deployment, and operations.
 
-## Stack
+## Development Approach
 
-| Layer | Choice |
-|---|---|
-| Framework | Next.js (App Router) |
-| Database & auth | Supabase (Postgres) |
-| Access control | Postgres **Row-Level Security** |
-| Type-safe data layer | Drizzle ORM |
-| Document generation | Headless browser rendering (Puppeteer) → filled PDF forms |
-| UI | Tailwind CSS + shadcn/ui |
-| Hosting | Vercel |
+Built with an AI-assisted workflow using Claude Code / Codex. I owned the data model, the form-automation pipeline, and the type-safe data layer; AI tools accelerated implementation and refactoring.
 
-## Architecture
+## Key Features
+
+- Enter client and policy data once, reuse across all forms
+- Automated ACORD form generation into carrier-ready PDFs
+- One authoritative record per client, reducing re-keying and transcription errors
+- Type-safe data layer end to end
+
+## AI / Automation Features
+
+- Document automation: structured data → filled, pixel-accurate ACORD PDFs *(live)*
+- Workflow automation: a single record drives every downstream form *(live)*
+- AI-assisted intake / data extraction from submitted documents *(planned)*
+
+## Tech Stack
+
+- **Frontend:** Next.js (App Router), Tailwind CSS, shadcn/ui
+- **Backend / DB:** Supabase (Postgres), Drizzle ORM (type-safe data layer)
+- **Document generation:** headless browser rendering (Puppeteer) → filled PDF forms
+- **Deployment:** Vercel
+
+## Architecture Overview
 
 > Illustrative pattern — not real deployment topology.
 
 ```mermaid
 flowchart TD
     A[Agent enters client + policy data once] --> B[Next.js App Router]
-    B --> C{Authenticated session?}
-    C -->|no| D[Sign-in]
-    C -->|yes| E[Server Action]
-    E --> F[(Supabase Postgres)]
-    F -. enforces .-> G[Row-Level Security<br/>scopes PII to the agency]
-    E --> H[ACORD template engine]
+    B --> C[Server Action]
+    C --> F[(Supabase Postgres)]
+    C --> H[ACORD template engine]
     H --> I[Headless render → filled PDF]
     I --> J[Download / send to carrier]
-
-    subgraph Sensitive-Data Boundary
-        F
-        G
-    end
 ```
 
-The principle: **client PII is entered once, lives behind a database-enforced access boundary, and flows into forms through a controlled pipeline — never copy-pasted across documents by hand.**
+User action → API route → database → document-generation pipeline → filled PDF → saved/sent.
 
-## Key decisions
+## Safety / Security / Compliance Notes
 
-- **Treat PII as the highest-value asset in the system.** This is the case study most relevant to a privacy/GRC role. Personal and financial data is scoped at the database layer with row-level security, so access is enforced by Postgres itself — not by hopeful checks in application code.
-- **Enter once, reuse everywhere — under control.** A single authoritative record drives every form. That kills transcription errors *and* gives one place to govern, retain, and (when needed) delete a client's data — the data-minimization and lifecycle thinking privacy frameworks require.
-- **Drizzle for a type-safe data layer.** End-to-end types from schema to query mean the shape of sensitive data is enforced at compile time, closing off a class of data-handling bugs before they ship.
-- **Headless rendering for pixel-accurate ACORD output.** Carriers expect the real, exact forms. Rendering through a headless browser produces faithful, fillable PDFs instead of fragile hand-built approximations.
+No proprietary source, customer data, or internal infrastructure detail is reproduced here. The app handles sensitive client information, so it's designed with database-enforced access control (Row-Level Security) scoping data to each agency, and a single authoritative record per client for clean data handling.
 
-## Outcome
+## Business Value
 
-- Live at [policypilot-one.vercel.app](https://policypilot-one.vercel.app).
-- Captures client and policy data once and auto-fills standardized ACORD forms from it.
-- Sensitive personal data is scoped to each agency through database-enforced row-level security, with a single authoritative record per client for clean governance and retention.
+- Designed to reduce manual documentation and data-entry time
+- Designed to cut transcription errors by sourcing every form from one record
+- Designed to standardize the submission-to-binding paperwork workflow
 
-## Screenshots
+## What I Learned
 
-![PolicyPilot](../assets/policypilot-home.png)
+Faithful document output matters as much as the data model — carriers expect the exact, real forms, so rendering accurate fillable PDFs (rather than approximations) was central. I also learned how a single-source-of-truth record simplifies an entire downstream workflow.
+
+## Status
+
+**Live (demo)** — at [policypilot-one.vercel.app](https://policypilot-one.vercel.app). Private production repo; sanitized public demo planned.
+
+## Next Improvements
+
+- AI-assisted intake to extract data from submitted documents
+- Support for additional form types beyond the initial ACORD set
+- Carrier-specific output templates
 
 ---
 

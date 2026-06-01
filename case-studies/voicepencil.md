@@ -1,32 +1,48 @@
 # VoicePencil
 
-**AI voice-to-text notes app for iOS.**
+🧭 **Type:** Mobile app (iOS) — TestFlight beta
 
-🧭 **Type:** Mobile app (iOS) — in TestFlight beta
-🛠 **Role:** Sole designer, engineer, and operator
+> No public web URL — case study is prose + architecture diagram. Screenshots omitted to avoid reproducing in-app content.
 
-> No public web URL — this case study is prose + architecture diagram only. Screenshots are omitted to avoid reproducing in-app content.
+## Summary
 
----
+VoicePencil is an iOS app that turns spoken input into clean, structured, useful notes — not just a raw transcript. It's a focused piece of document-automation: capture by voice, and let AI do the work of organizing it into something worth keeping.
 
 ## Problem
 
-Capturing a thought by voice is fast; turning it into a clean, organized, searchable note is not. Most voice apps stop at a raw transcript. VoicePencil's goal is to take spoken input and produce **structured, useful notes** — with a subscription model that sustains the product.
+Capturing a thought by voice is fast; turning it into an organized, searchable note is not. Most voice apps stop at a raw transcript and leave the structuring to you.
 
-## My role
+## Solution
 
-I own the entire product: UX, mobile architecture, the AI transcription/structuring pipeline, subscription billing, and release operations through Apple's pipeline.
+A mobile app with a pipeline that takes audio, transcribes it, and uses AI to structure the result into a clean note — wrapped in a subscription model that gates premium capability.
 
-## Stack
+## My Role
 
-| Layer | Choice |
-|---|---|
-| Framework | Expo SDK 54 (React Native, New Architecture) |
-| Language | TypeScript (strict) |
-| Subscriptions | RevenueCat |
-| Build & release | EAS Build → TestFlight |
+**Solo product owner and AI-assisted implementation builder** — UX, mobile architecture, the AI transcription/structuring pipeline, subscription billing, and release operations.
 
-## Architecture
+## Development Approach
+
+Built with an AI-assisted workflow using Claude Code / Codex on Expo's New Architecture. I directed the product and the audio → AI → storage pipeline; AI tools accelerated implementation and debugging.
+
+## Key Features
+
+- Voice capture → transcription → structured note
+- Subscription entitlements (premium features)
+- Built on Expo SDK 54 (New Architecture)
+
+## AI / Automation Features
+
+- AI structuring of transcripts into organized notes *(core flow)*
+- Voice-to-text transcription pipeline *(core flow)*
+- Smart categorization / templates by note type *(in progress)*
+
+## Tech Stack
+
+- **Frontend:** Expo SDK 54 (React Native, New Architecture), TypeScript (strict)
+- **Subscriptions:** RevenueCat
+- **Build & release:** EAS Build → TestFlight
+
+## Architecture Overview
 
 > Illustrative pattern — not real infrastructure.
 
@@ -38,22 +54,33 @@ flowchart TD
     D --> E[AI structuring into a clean note]
     E --> F[Local note store]
     B --> G{Subscription entitlement?}
-    G -->|RevenueCat| H[Premium features unlocked]
+    G -->|RevenueCat| H[Premium features]
 ```
 
-The interesting work is the **pipeline from raw audio to a note a person actually wants to keep**, plus a subscription layer that gates premium capability cleanly.
+User action → capture → transcription → AI structuring → saved note.
 
-## Key decisions
+## Safety / Security / Compliance Notes
 
-- **Expo's New Architecture (SDK 54).** Bridgeless, modern React Native — better performance and a maintainable path forward versus bare RN.
-- **TypeScript strict, no `any`.** Type safety across the audio → AI → storage pipeline catches whole classes of bugs before they ship to a phone I can't hot-fix.
-- **RevenueCat for billing.** Subscription state across App Store edge cases (renewals, refunds, restores) is genuinely hard; RevenueCat owns that complexity so I don't reinvent receipt validation.
-- **Privacy of voice data is a first-class concern.** Voice is sensitive personal data. Minimizing what's retained and being deliberate about where audio and transcripts live is a design constraint, not a footnote — exactly the privacy-by-design thinking I'm carrying into GRC work.
+No proprietary source or user data is reproduced here. Voice and transcript data are handled with care for what's retained and where it lives — a deliberate design constraint given the sensitivity of voice input.
 
-## Outcome
+## Business Value
 
-- In **TestFlight** beta, progressing toward App Store launch.
-- Built on Expo's New Architecture with a working voice → transcription → structured-note pipeline and live subscription entitlements.
+- Designed to make voice capture genuinely useful, not just a transcript
+- Designed to reduce the effort of turning a thought into an organized note
+
+## What I Learned
+
+The product value is entirely in the *structuring* step — the gap between a transcript and a note someone actually keeps. I also got hands-on with the real-world edge cases of subscription state (renewals, refunds, restores) via RevenueCat.
+
+## Status
+
+**In progress** — TestFlight beta, moving toward App Store launch. Private production repo.
+
+## Next Improvements
+
+- Smarter categorization by note type
+- Search across notes
+- App Store launch
 
 ---
 
