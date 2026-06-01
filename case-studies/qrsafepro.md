@@ -2,7 +2,7 @@
 
 🔗 **Live:** [qrsafepro.com](https://qrsafepro.com)
 
-![QRSafePro](../assets/qrsafepro-home.png)
+![QRSafePro homepage](../assets/screenshots/qrsafepro/home.png)
 
 ## Summary
 
@@ -86,6 +86,14 @@ Enforcing multi-tenant isolation at the database layer (rather than in applicati
 - AI-assisted inspection summaries and report generation
 - Offline-first capture for low-connectivity sites
 - Richer analytics on inspection trends
+
+## Screenshots / Demo
+
+- ![QRSafePro homepage](../assets/screenshots/qrsafepro/home.png) — product homepage
+- Coming soon: inspection dashboard screenshot
+- Coming soon: QR scan → field workflow screenshot
+- Coming soon: mobile / field-user view
+- Coming soon: 1–2 minute demo video
 
 ---
 

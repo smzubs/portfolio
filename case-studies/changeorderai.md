@@ -82,6 +82,12 @@ The hard part isn't the AI — it's encoding what makes a change order *defensib
 - Photo attachments as supporting evidence
 - Client e-signature / approval flow
 
+## Screenshots / Demo
+
+- Coming soon: plain-language input screen (mobile / field view)
+- Coming soon: AI-generated change-order document preview
+- Coming soon: 1–2 minute demo video
+
 ---
 
 [← Back to portfolio index](../README.md)

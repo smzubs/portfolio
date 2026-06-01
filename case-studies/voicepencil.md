@@ -82,6 +82,12 @@ The product value is entirely in the *structuring* step — the gap between a tr
 - Search across notes
 - App Store launch
 
+## Screenshots / Demo
+
+- Coming soon: voice-capture screen (mobile / field view)
+- Coming soon: AI structuring — transcript → organized note
+- Coming soon: 1–2 minute demo video
+
 ---
 
 [← Back to portfolio index](../README.md)

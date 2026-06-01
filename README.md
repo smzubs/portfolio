@@ -57,7 +57,7 @@ This is how modern software gets built efficiently by a solo builder: I bring th
 
 ## 🗂 Public code / demo strategy
 
-Some production code remains private for safety, security, and proprietary reasons. **Public demo repositories and sanitized examples are being prepared** to show architecture, implementation patterns, and documentation quality without exposing customer data or proprietary logic.
+Some production code remains private for safety, security, and proprietary reasons. Public demo repositories and sanitized examples are being prepared to show architecture, implementation patterns, documentation quality, and AI-assisted development workflow.
 
 | Project | Live demo | Public code |
 |---|---|---|

@@ -2,7 +2,7 @@
 
 🔗 **Live demo:** [policypilot-one.vercel.app](https://policypilot-one.vercel.app)
 
-![PolicyPilot](../assets/policypilot-home.png)
+![PolicyPilot homepage](../assets/screenshots/policypilot/home.png)
 
 ## Summary
 
@@ -83,6 +83,13 @@ Faithful document output matters as much as the data model — carriers expect t
 - AI-assisted intake to extract data from submitted documents
 - Support for additional form types beyond the initial ACORD set
 - Carrier-specific output templates
+
+## Screenshots / Demo
+
+- ![PolicyPilot homepage](../assets/screenshots/policypilot/home.png) — product homepage
+- Coming soon: data-entry → form-generation workflow screenshot
+- Coming soon: generated ACORD PDF preview
+- Coming soon: 1–2 minute demo video
 
 ---
 

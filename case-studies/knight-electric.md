@@ -2,7 +2,7 @@
 
 🔗 **Live:** [knightelectric.net](https://knightelectric.net)
 
-![Knight Electric](../assets/knightelectric-home.png)
+![Knight Electric homepage](../assets/screenshots/knight-electric/home.png)
 
 ## Summary
 
@@ -72,6 +72,12 @@ For a marketing site, restraint wins — clear structure and speed matter far mo
 
 - Expanded service / project content
 - Lead-capture refinements
+
+## Screenshots / Demo
+
+- ![Knight Electric homepage](../assets/screenshots/knight-electric/home.png) — live homepage
+- Coming soon: services / interior pages
+- Coming soon: mobile view
 
 ---
 
