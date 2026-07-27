@@ -1,6 +1,6 @@
 # VoicePencil
 
-🧭 **Type:** Mobile app (iOS) — TestFlight beta
+🧭 **Type:** Mobile app (iOS) — App Store submission in progress
 
 > No public web URL — case study is prose + architecture diagram. Screenshots omitted to avoid reproducing in-app content.
 
@@ -74,13 +74,12 @@ The product value is entirely in the *structuring* step — the gap between a tr
 
 ## Status
 
-**In progress** — TestFlight beta, moving toward App Store launch. Private production repo.
+**App Store submission in progress.** Private production repo.
 
 ## Next Improvements
 
 - Smarter categorization by note type
 - Search across notes
-- App Store launch
 
 ## Screenshots / Demo
 

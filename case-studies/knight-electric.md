@@ -2,6 +2,8 @@
 
 🔗 **Live:** [knightelectric.net](https://knightelectric.net)
 
+> Representative of my client website work. Also live: [bigdaddysfishing.com](https://bigdaddysfishing.com), a charter-fishing site built solo on the same stack.
+
 ![Knight Electric homepage](../assets/screenshots/knight-electric/home.png)
 
 ## Summary

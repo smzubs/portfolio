@@ -4,79 +4,59 @@
 
 </div>
 
-I build practical, AI-assisted software systems for **safety, compliance, construction, field operations, and business workflow automation.** This is a case-study portfolio of products I've built at [Verdorian Technologies LLC](https://verdorian.com) — each one tied to a real operational problem, with the architecture, decisions, and current status laid out honestly.
+I build AI-assisted software for safety, compliance, construction, and field operations at [Verdorian Technologies LLC](https://verdorian.com). Seven years in construction safety and OSHA work means I understand the field paperwork before I write code for it. I'm a solo builder — I direct Claude Code, Codex, and Cursor daily and own product, architecture, deployment, and the result.
 
-> No proprietary source code, API keys, customer data, confidential documents, or internal infrastructure details appear in this public portfolio. Architecture diagrams are illustrative representations of standard patterns, not real deployment topology.
-
----
-
-## 🎯 Career focus
-
-Applied AI automation across **SafetyTech, ComplianceTech, construction workflow automation, field operations software, inspection systems, QR-based workflows, and business process automation.**
-
-My background is seven years in construction safety and OSHA work — I know how field operations and compliance documentation actually function, and I build software that fits that reality. I'm not positioning as a traditional senior engineer; I'm an **AI-native builder** who owns product thinking, architecture direction, domain validation, deployment, and documentation, implementing with AI coding tools.
+> No proprietary source code, API keys, customer data, or infrastructure details appear in this public portfolio.
 
 ---
 
 ## 📂 Featured case studies
 
-| Project | Problem → Solution | Stack | Status |
+| Project | What it does | Stack | Status |
 |---|---|---|---|
-| [**QRSafePro / QRStock**](./case-studies/qrsafepro.md) | Paper-based field safety & inventory → QR-driven inspection and inventory automation | Next.js · Supabase · Postgres | Live · [qrsafepro.com](https://qrsafepro.com) |
-| [**ChangeOrderAI**](./case-studies/changeorderai.md) | Change orders written badly on-site → AI-generated, structured change-order documents | Expo · Supabase | In progress |
-| [**PolicyPilot**](./case-studies/policypilot.md) | Re-keying client data across insurance forms → automated ACORD form generation | Next.js · Supabase · Puppeteer | Live · [demo](https://policypilot-one.vercel.app) |
-| [**VoicePencil**](./case-studies/voicepencil.md) | Raw voice memos that go nowhere → AI voice-to-structured-notes automation | Expo SDK 54 · RevenueCat | TestFlight beta |
-| [**Knight Electric**](./case-studies/knight-electric.md) | Dated contractor web presence → fast, mobile-first marketing site | Next.js · Tailwind | Live · [knightelectric.net](https://knightelectric.net) |
+| [**QRSafePro**](./case-studies/qrsafepro.md) | Multi-tenant SaaS: equipment inspections + AI-generated OSHA docs | Next.js · Supabase · Postgres | Live · [qrsafepro.com](https://qrsafepro.com) |
+| [**ChangeOrderAI**](./case-studies/changeorderai.md) | Plain-language job-site input → sendable change orders | Next.js · Expo · Supabase | Live (web) · mobile in TestFlight |
+| [**PolicyPilot**](./case-studies/policypilot.md) | AI reads carrier PDFs, fills 302-field ACORD forms | Next.js · Supabase · Puppeteer | In progress · [demo](https://policypilot-one.vercel.app) |
+| [**VoicePencil**](./case-studies/voicepencil.md) | Voice capture → clean, structured notes | Expo · RevenueCat | iOS · submission in progress |
+| [**Borno**](./case-studies/borno.md) | Offline iOS word game vs an on-device AI opponent | Expo · TypeScript · SQLite | iOS · submission in progress |
+| [**Client websites**](./case-studies/knight-electric.md) | Marketing sites for contractor and charter clients | Next.js · Tailwind | Live · [knightelectric.net](https://knightelectric.net) · [bigdaddysfishing.com](https://bigdaddysfishing.com) |
 
 ---
 
 ## 🤖 Development approach
 
-These projects were built using an AI-assisted development workflow with **Claude Code / Codex.** I led the product direction, domain logic, architecture decisions, testing, deployment, and documentation, while using AI tools to accelerate implementation, refactoring, and debugging.
-
-This is how modern software gets built efficiently by a solo builder: I bring the domain knowledge and product judgment, the AI accelerates the keystrokes, and I own the result end to end.
+Every project here was built with Claude Code and Codex. The data model, security design, domain logic, and product calls are mine, and I review everything that ships. The AI accelerates the typing; I own the result.
 
 ---
 
-## 🧠 Technical areas I can explain
+## 🧠 What I can explain in depth
 
-- AI-assisted product development workflow
-- Safety and field operations workflow design
-- QR-based inspection and field documentation systems
-- Multi-tenant SaaS architecture concepts
-- Supabase authentication and Postgres Row-Level Security
-- Server-side tenant resolution and access-control thinking
-- AI-generated safety and compliance documents
-- RAG-style document analysis and citation-based AI answers
-- Report generation and document automation workflows
-- Deployment with Vercel / Supabase
-- Product trade-offs for field and mobile users
-- How I use Claude Code / Codex responsibly for implementation, debugging, and documentation
+- Multi-tenant SaaS architecture
+- Supabase / Postgres with Row-Level Security
+- LLM API integration (Anthropic, OpenAI) in production
+- Subscription billing with Stripe and RevenueCat
+- Shipping iOS apps with Expo / React Native
+- AI-assisted development workflow — Claude Code agents, MCP servers, hooks
 
 ---
 
-## 🗂 Public code / demo strategy
+## 🗂 Code availability
 
-Some production code remains private for safety, security, and proprietary reasons. Public demo repositories and sanitized examples are being prepared to show architecture, implementation patterns, documentation quality, and AI-assisted development workflow.
+Production code is private for security and client reasons.
 
-| Project | Live demo | Public code |
-|---|---|---|
-| QRSafePro | [qrsafepro.com](https://qrsafepro.com) | Private production repo; sanitized public demo planned |
-| ChangeOrderAI | Coming soon | Private production repo; sanitized public demo planned |
-| PolicyPilot | [demo](https://policypilot-one.vercel.app) | Private production repo; sanitized public demo planned |
-| VoicePencil | TestFlight (iOS) | Private production repo |
-| Knight Electric | [knightelectric.net](https://knightelectric.net) | Private repo (client work) |
+| Project | Public code |
+|---|---|
+| QRSafePro · ChangeOrderAI · PolicyPilot | Private · sanitized demo planned |
+| VoicePencil · Borno | Private |
+| Client websites | Private (client work) |
 
 ---
 
-## 📫 Contact / availability
+## 📫 Contact
 
-Open to **remote roles and contract projects** in AI automation, safety technology, compliance technology, construction workflow automation, field operations software, and full-stack implementation.
+Open to remote roles and contract work in AI automation, safety and compliance tech, and full-stack implementation.
 
 - 📄 **Résumé:** [SM_Zobayer_Resume.pdf](./assets/SM_Zobayer_Resume.pdf)
 - 📫 **Email:** [smzobayer@gmail.com](mailto:smzobayer@gmail.com)
 - 💼 **LinkedIn:** [linkedin.com/in/smzobayer](https://linkedin.com/in/smzobayer)
 - 🌐 **Studio:** [verdorian.com](https://verdorian.com)
-- 🐙 **GitHub:** [github.com/smzubs](https://github.com/smzubs)
-
-<div align="center"><sub>All content authored fresh for this showcase · no proprietary source reproduced</sub></div>

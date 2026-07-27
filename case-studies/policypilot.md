@@ -1,12 +1,12 @@
 # PolicyPilot
 
-🔗 **Live demo:** [policypilot-one.vercel.app](https://policypilot-one.vercel.app)
+🔗 **Working demo:** [policypilot-one.vercel.app](https://policypilot-one.vercel.app) — in progress
 
 ![PolicyPilot homepage](../assets/screenshots/policypilot/home.png)
 
 ## Summary
 
-PolicyPilot is a document-automation tool for insurance agencies. Agencies live on **ACORD forms** — the standardized paperwork that moves a policy from submission to binding — and re-key the same client and policy information across form after form. PolicyPilot captures that data once and **auto-fills the ACORD forms from it**, turning repetitive manual paperwork into a generated document.
+PolicyPilot is a document-automation tool for insurance agencies. Agencies live on **ACORD forms** — the standardized paperwork that moves a policy from submission to binding — and re-key the same client and policy information across form after form. PolicyPilot uses AI to **read carrier PDFs and extract the underlying data**, then auto-fills the ACORD forms from it, including a 302-field form. Repetitive manual paperwork becomes a generated document.
 
 ## Problem
 
@@ -26,21 +26,23 @@ Built with an AI-assisted workflow using Claude Code / Codex. I owned the data m
 
 ## Key Features
 
-- Enter client and policy data once, reuse across all forms
-- Automated ACORD form generation into carrier-ready PDFs
+- AI extraction of client and policy data from carrier PDFs
+- Enter or extract data once, reuse across all forms
+- Automated ACORD form generation into carrier-ready PDFs, up to 302 fields per form
 - One authoritative record per client, reducing re-keying and transcription errors
 - Type-safe data layer end to end
 
 ## AI / Automation Features
 
-- Document automation: structured data → filled, pixel-accurate ACORD PDFs *(live)*
-- Workflow automation: a single record drives every downstream form *(live)*
-- AI-assisted intake / data extraction from submitted documents *(planned)*
+- AI intake: reads carrier PDFs and extracts structured policy data *(core flow)*
+- Document automation: structured data → filled, pixel-accurate ACORD PDFs *(core flow)*
+- Workflow automation: a single record drives every downstream form *(core flow)*
 
 ## Tech Stack
 
 - **Frontend:** Next.js (App Router), Tailwind CSS, shadcn/ui
 - **Backend / DB:** Supabase (Postgres), Drizzle ORM (type-safe data layer)
+- **AI:** LLM-based extraction of policy data from carrier PDFs
 - **Document generation:** headless browser rendering (Puppeteer) → filled PDF forms
 - **Deployment:** Vercel
 
@@ -50,8 +52,9 @@ Built with an AI-assisted workflow using Claude Code / Codex. I owned the data m
 
 ```mermaid
 flowchart TD
-    A[Agent enters client + policy data once] --> B[Next.js App Router]
-    B --> C[Server Action]
+    A[Carrier PDF or manual entry] --> B[Next.js App Router]
+    B --> K[AI extraction → structured policy data]
+    K --> C[Server Action]
     C --> F[(Supabase Postgres)]
     C --> H[ACORD template engine]
     H --> I[Headless render → filled PDF]
@@ -76,11 +79,10 @@ Faithful document output matters as much as the data model — carriers expect t
 
 ## Status
 
-**Live (demo)** — at [policypilot-one.vercel.app](https://policypilot-one.vercel.app). Private production repo; sanitized public demo planned.
+**In progress** — working demo at [policypilot-one.vercel.app](https://policypilot-one.vercel.app). Private production repo.
 
 ## Next Improvements
 
-- AI-assisted intake to extract data from submitted documents
 - Support for additional form types beyond the initial ACORD set
 - Carrier-specific output templates
 

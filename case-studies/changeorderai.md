@@ -1,8 +1,8 @@
 # ChangeOrderAI
 
-🧭 **Type:** Mobile app (Expo) — in progress
+🧭 **Type:** Web app (live) + iOS app (TestFlight)
 
-> No public demo URL yet — case study is prose + architecture diagram.
+> No public demo URL — case study is prose + architecture diagram.
 
 ## Summary
 
@@ -39,8 +39,9 @@ Built with an AI-assisted workflow using Claude Code / Codex. I bring the constr
 
 ## Tech Stack
 
-- **Frontend:** Expo (React Native), TypeScript
-- **Backend / DB:** Supabase (Postgres) — planned with Row-Level Security
+- **Web:** Next.js, TypeScript
+- **Mobile:** Expo (React Native), TypeScript
+- **Backend / DB:** Supabase (Postgres) with Row-Level Security
 - **AI:** LLM-based text structuring and document generation
 
 ## Architecture Overview
@@ -49,7 +50,7 @@ Built with an AI-assisted workflow using Claude Code / Codex. I bring the constr
 
 ```mermaid
 flowchart TD
-    A[Contractor describes change in plain language] --> B[Expo / React Native app]
+    A[Contractor describes change in plain language] --> B[Web app / iOS app]
     B --> C[AI structures scope + justification + cost]
     C --> D[Formatted change-order document]
     D --> E[Send / export to client]
@@ -74,7 +75,7 @@ The hard part isn't the AI — it's encoding what makes a change order *defensib
 
 ## Status
 
-**In progress** — active development. Private production repo; sanitized public demo planned.
+**Live (web); iOS app in TestFlight.** Private production repo; sanitized public demo planned.
 
 ## Next Improvements
 

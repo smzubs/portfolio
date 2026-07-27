@@ -6,7 +6,7 @@
 
 ## Summary
 
-QRSafePro is a QR-driven platform that automates safety inspections and inventory tracking for field teams in construction and field operations. Scanning a QR code on a piece of equipment or a location *is* the workflow — it pulls up the right form, records who did what and when, and keeps an attributable, exportable record. QRStock is the inventory side, tracking materials and tools as they move between sites.
+QRSafePro is a multi-tenant SaaS platform that automates equipment inspections, inventory tracking, and OSHA documentation for field teams in construction and field operations. Scanning a QR code on a piece of equipment or a location *is* the workflow — it pulls up the right form, records who did what and when, and keeps an attributable, exportable record. QRStock is the inventory side, and the platform also generates OSHA written programs with AI.
 
 ## Problem
 
@@ -29,11 +29,13 @@ Built with an AI-assisted workflow using Claude Code / Codex. I owned the data m
 - QR scan as the primary interaction — point a phone, get the right form
 - Safety inspection capture with attributable records (who / what / when)
 - Inventory tracking for materials and equipment across sites (QRStock)
+- AI-generated OSHA written programs, validated before they can be saved
 - Multi-tenant: each organization's data is isolated
 - Structured export for reporting
 
 ## AI / Automation Features
 
+- AI generation of OSHA written safety programs from an organization's own details *(live)*
 - Workflow automation: a scan routes directly to the correct action, removing manual lookup *(live)*
 - AI-assisted summaries and report generation for inspection data *(planned)*
 
@@ -42,6 +44,7 @@ Built with an AI-assisted workflow using Claude Code / Codex. I owned the data m
 - **Frontend:** Next.js (App Router, Server Components), Tailwind CSS, shadcn/ui
 - **Backend / DB:** Supabase (Postgres)
 - **Access control:** Postgres Row-Level Security
+- **AI:** LLM-generated OSHA written programs with a validation gate
 - **Deployment:** Vercel
 
 ## Architecture Overview
