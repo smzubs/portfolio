@@ -4,7 +4,7 @@
 
 I build AI-assisted systems that remove repetitive work, connect tools and data, generate structured outputs, and turn messy operating processes into reliable workflows.
 
-[**Employer-focused AI Automation Portfolio**](./AI_AUTOMATION_PORTFOLIO.md) · [GitHub Profile](https://github.com/smzubs) · [Verdorian Technologies](https://verdorian.com)
+[**Employer-focused AI Automation Portfolio**](./AI_AUTOMATION_PORTFOLIO.md) · [Resume](./RESUME.md) · [GitHub Profile](https://github.com/smzubs) · [Verdorian Technologies](https://verdorian.com)
 
 </div>
 
